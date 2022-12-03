@@ -1,1 +1,1 @@
-# hapi-providers
+# hapi-extensions
