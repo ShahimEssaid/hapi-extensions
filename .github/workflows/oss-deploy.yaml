@@ -22,16 +22,23 @@ jobs:
                 "id": "oss", 
                 "url": "https://oss.sonatype.org/content/repositories/snapshots/",
                 "snapshots": {
-                            "enabled": "true"
-                          }
+                                "enabled": "true"
+                            }
               }
             ]
-          servers:
-            - id: 'oss'
-              username: '${env.OSS_TOKEN_USER}'
-              password: '${env.OSS_TOKEN_PASS}'
-            - id: 'pgp.passphrase'
-              passphrase: '${env.MVN_GPG_PASS}'
+          servers: >
+            [
+              {
+                "id": "oss",
+                "username": "${env.OSS_TOKEN_USER}",
+                "password": "${env.OSS_TOKEN_PASS}"
+              },
+              {
+                "id": "pgp.passphrase",
+                "passphrase": "${env.MVN_GPG_PASS}"
+              }
+            ]
+
 
       - run: cat ~/.m2/settings.xml
       - run: ./mvnw -Pdeploy,github deploy
