@@ -38,10 +38,8 @@ jobs:
                 "passphrase": "${env.MVN_GPG_PASS}"
               }
             ]
-
-
       - run: cat ~/.m2/settings.xml
-      - run: ./mvnw -Pdeploy,github deploy
+      - run: ./mvnw -X -Pdeploy,github deploy
         env:
           OSS_TOKEN_USER: ${{ secrets.OSS_TOKEN_USER }}
           OSS_TOKEN_PASS: ${{ secrets.OSS_TOKEN_PASS }}
