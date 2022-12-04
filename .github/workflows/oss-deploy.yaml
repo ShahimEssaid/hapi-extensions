@@ -34,12 +34,12 @@ jobs:
                 "password": "${env.OSS_TOKEN_PASS}"
               },
               {
-                "id": "pgp.passphrase",
+                "id": "gpg.passphrase",
                 "passphrase": "${env.MVN_GPG_PASS}"
               }
             ]
       - run: cat ~/.m2/settings.xml
-      - run: ./mvnw -X -Pdeploy,github deploy
+      - run: ./mvnw -Pdeploy clean deploy
         env:
           OSS_TOKEN_USER: ${{ secrets.OSS_TOKEN_USER }}
           OSS_TOKEN_PASS: ${{ secrets.OSS_TOKEN_PASS }}
