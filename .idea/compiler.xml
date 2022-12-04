@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.essaid.hapi.hapi-extensions" />
+        <module name="com.essaid.fhir.hapi-extensions" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.essaid.hapi.extensions" target="17" />
+      <module name="com.essaid.hapi.hapi-extensions" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
