@@ -12,11 +12,11 @@
 
   <groupId>com.essaid.fhir</groupId>
   <artifactId>com.essaid.fhir.hapi-extensions</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.1-SNAPSHOT</version>
 
   <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <hapi-fhir.version>6.2.2</hapi-fhir.version>
   </properties>
@@ -27,6 +27,7 @@
       <artifactId>hapi-fhir-jpaserver-base</artifactId>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
