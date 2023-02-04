@@ -1,0 +1,10 @@
+#This is just an example file. The following properties need to be specified in an actual Spring Boot configuration file.
+
+
+com:
+  essaid:
+    fhir:
+      hapi:
+        extensions:
+          provider-class-names:
+            - com.essaid.fhir.hapi.extensions.provider.HelloHapi

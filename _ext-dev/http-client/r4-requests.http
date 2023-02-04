@@ -1,0 +1,23 @@
+# Post pateint example
+POST {{fhir-api-8080}}/Patient
+Content-Type: application/json+fhir
+
+< ../R4Resources/patient-example.json
+
+###
+POST {{fhir-api-8080}}/CodeSystem
+Content-Type: application/json+fhir
+
+< ../R4Resources/codesystem-example.json
+
+###
+PUT {{fhir-api-8080}}/CodeSystem/comp-l
+Content-Type: application/json+fhir
+
+< ../R4Resources/CodeSystem-comp-loinc.json
+
+###
+PUT {{fhir-api-8080}}/CodeSystem/HPO
+Content-Type: application/json+fhir
+
+< ../R4Resources/CodeSystem-HPO.json

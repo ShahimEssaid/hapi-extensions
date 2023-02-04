@@ -5,13 +5,10 @@
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="com.essaid.fhir.hapi-extensions" />
+        <module name="hapi-fhir-jpaserver-starter.main" />
+        <module name="hapi-fhir-jpaserver-starter.test" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="com.essaid.hapi.extensions" target="17" />
-      <module name="com.essaid.hapi.hapi-extensions" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

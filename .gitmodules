@@ -1,0 +1,4 @@
+[submodule "jpastarter"]
+	path = jpastarter
+	url = https://github.com/ShahimEssaid/hapi-fhir-jpaserver-starter-clone-1
+	branch = master

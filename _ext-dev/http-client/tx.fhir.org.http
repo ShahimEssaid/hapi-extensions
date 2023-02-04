@@ -1,0 +1,10 @@
+GET https://tx.fhir.org/r4/CodeSystem/$lookup?code=623671&system=http://www.nlm.nih.gov/research/umls/rxnorm
+Accept: application/json+fhir
+
+
+###
+GET http://tx.fhir.org/r4/CodeSystem/$lookup?system=http://loinc.org&code=1963-8
+Accept: application/json+fhir
+
+###
+

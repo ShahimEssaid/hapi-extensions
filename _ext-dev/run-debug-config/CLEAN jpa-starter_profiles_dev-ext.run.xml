@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CLEAN jpa-starter_profiles_dev-ext" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" value="dev-ext" />
+    <module name="hapi-fhir-jpaserver-starter.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ca.uhn.fhir.jpa.starter.Application" />
+    <option name="WORKING_DIRECTORY" value="file://_ext-dev/work-dir/jpa-starter_profiles_dev-ext" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_remove target directory" />
+    </method>
+  </configuration>
+</component>

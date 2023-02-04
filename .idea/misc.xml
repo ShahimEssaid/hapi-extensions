@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/src/main/java" />
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/src/main/resources" />
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/src/test/java" />
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/src/test/resources" />
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/target/generated-sources/annotations" />
+    <file type="web" url="file://$PROJECT_DIR$/jpastarter/target/generated-test-sources/test-annotations" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
