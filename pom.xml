@@ -12,7 +12,7 @@
 
   <modules>
     <module>extensions</module>
-    <module>jpastarter</module>
+    <module>jpastarter-extended</module>
   </modules>
 
 </project>

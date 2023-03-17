@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25bb0e93-1631-4cc4-9c14-132d7ed44d34" name="Changes" comment="Test OSS deploy.">
+      <change afterPath="$PROJECT_DIR$/jpastarter-extended" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpastarter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Public Environment File" />
+        <option value="Class" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/jpastarter-extended" />
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpa/6.2.2/hapi-fhir-jpa-6.2.2-sources.jar!/ca/uhn/fhir/jpa/config/HapiFhirLocalContainerEntityManagerFactoryBean.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/config/BeanPostProcessorConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/config/JpaConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/config/r4/JpaR4Config.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/config/util/HapiEntityManagerFactoryUtil.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/entity/TermConcept.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/provider/TerminologyUploaderProvider.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-base/6.2.2/hapi-fhir-jpaserver-base-6.2.2-sources.jar!/ca/uhn/fhir/jpa/term/TermLoaderSvcImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-jpaserver-model/6.2.2/hapi-fhir-jpaserver-model-6.2.2-sources.jar!/ca/uhn/fhir/jpa/model/entity/ResourceTable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-storage/6.2.2/hapi-fhir-storage-6.2.2-sources.jar!/ca/uhn/fhir/jpa/term/api/ITermLoaderSvc.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/ca/uhn/hapi/fhir/hapi-fhir-storage/6.2.2/hapi-fhir-storage-6.2.2-sources.jar!/ca/uhn/fhir/jpa/term/models/CodeSystemVersionPIDResult.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/flywaydb/flyway-core/9.4.0/flyway-core-9.4.0-sources.jar!/org/flywaydb/core/Flyway.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/hibernate/search/hibernate-search-engine/6.1.6.Final/hibernate-search-engine-6.1.6.Final-sources.jar!/org/hibernate/search/engine/backend/document/model/spi/AbstractIndexFieldTemplate.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/hibernate/search/hibernate-search-mapper-pojo-base/6.1.6.Final/hibernate-search-mapper-pojo-base-6.1.6.Final-sources.jar!/org/hibernate/search/mapper/pojo/mapping/definition/annotation/processing/impl/IndexedProcessor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.7.4/spring-boot-actuator-autoconfigure-2.7.4.jar!/META-INF/spring-autoconfigure-metadata.properties" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.3.23/spring-beans-5.3.23-sources.jar!/org/springframework/beans/factory/config/BeanPostProcessor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.3.23/spring-core-5.3.23-sources.jar!/org/springframework/core/Ordered.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.3.23/spring-orm-5.3.23-sources.jar!/org/springframework/orm/hibernate5/SpringBeanContainer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/jpastarter-extended/pom.xml" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="file://$PROJECT_DIR$/_work-directory/http-client/r4-requests.http" environment="dev" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="boot" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IQHXju38PRo8bMrlUmsCekwS5V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="1" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showModules" value="false" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaClassFindUsagesOptions.isSearchForTextOccurrences": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/essaids/_data/Dropbox/L/git/gh/se/hapi-extensions/_ext-dev/run-debug-config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.1181332",
+    "project.structure.side.proportion": "0.25083238",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "spring.configuration.checksum": "321bdf4cb45eb05d081506ed7da5931f",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "repository"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/_ext-dev/work-dir/jpa-starter_profiles_dev-ext" />
+      <recent name="$PROJECT_DIR$/_ext-dev/lucene-9.4.2" />
+      <recent name="$PROJECT_DIR$/hapi-configs" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_ext-dev" />
+      <recent name="$PROJECT_DIR$/_ext-dev/work-dir/jpa-starter_profiles_dev-ext" />
+      <recent name="$PROJECT_DIR$/launchers/x-working-directory" />
+      <recent name="$PROJECT_DIR$/jpastarter/src/main/java" />
+      <recent name="$PROJECT_DIR$/jpastarter/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.essaid.fhir.hapi.extensions.web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Remote JVM Debug.Remote local host 8999 debugger">
+    <configuration name="r4-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_ext-dev/http-client/r4-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="r4-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_ext-dev/http-client/r4-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="r4-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_ext-dev/http-client/r4-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tx.fhir.org | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" environment="" path="$PROJECT_DIR$/_ext-dev/http-client/tx.fhir.org.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tx.fhir.org | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/_ext-dev/http-client/tx.fhir.org.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="hapi-fhir-jpaserver-starter.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.uhn.fhir.jpa.starter.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DIRTY jpa-starter_profiles_dev-ext" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="dev-ext" />
+      <module name="hapi-fhir-jpaserver-starter.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.uhn.fhir.jpa.starter.Application" />
+      <option name="WORKING_DIRECTORY" value="file://_ext-dev/work-dir/jpa-starter_profiles_dev-ext" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.tx.fhir.org | #1" />
+      <item itemvalue="HTTP Request.tx.fhir.org | #2" />
+      <item itemvalue="HTTP Request.r4-requests | #2" />
+      <item itemvalue="HTTP Request.r4-requests | #3" />
+      <item itemvalue="HTTP Request.r4-requests | #4" />
+      <item itemvalue="Remote JVM Debug.Remote local host 8999 debugger" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.CLEAN jpa-starter_profiles_dev-ext" />
+      <item itemvalue="Spring Boot.DIRTY jpa-starter_profiles_dev-ext" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.tx.fhir.org | #1" />
+        <item itemvalue="HTTP Request.tx.fhir.org | #2" />
+        <item itemvalue="HTTP Request.r4-requests | #4" />
+        <item itemvalue="HTTP Request.r4-requests | #3" />
+        <item itemvalue="HTTP Request.r4-requests | #2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25bb0e93-1631-4cc4-9c14-132d7ed44d34" name="Changes" comment="" />
+      <created>1670106930583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670106930583</updated>
+      <workItem from="1670106932852" duration="8206000" />
+      <workItem from="1670118586729" duration="7477000" />
+      <workItem from="1673298957071" duration="831000" />
+      <workItem from="1673299810001" duration="11770000" />
+      <workItem from="1673594340882" duration="9230000" />
+      <workItem from="1673901090433" duration="170000" />
+      <workItem from="1673901854450" duration="13270000" />
+      <workItem from="1673977761755" duration="9038000" />
+      <workItem from="1674080540186" duration="27146000" />
+      <workItem from="1674534400903" duration="1062000" />
+      <workItem from="1675371971441" duration="4878000" />
+      <workItem from="1675384244078" duration="2055000" />
+      <workItem from="1675467411506" duration="8896000" />
+      <workItem from="1675478156197" duration="1273000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test OSS deploy.">
+      <created>1670107595258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670107595258</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test OSS deploy.">
+      <created>1670107770391</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670107770391</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test OSS deploy.">
+      <created>1670109138157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670109138157</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Test OSS deploy.">
+      <created>1670110084742</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110084742</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Test OSS deploy.">
+      <created>1670110320174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110320174</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test OSS deploy.">
+      <created>1670110800231</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110800231</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Test OSS deploy.">
+      <created>1670112888527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670112888527</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Test OSS deploy.">
+      <created>1670112975121</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670112975121</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test OSS deploy.">
+      <created>1670113123982</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670113123982</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Test OSS deploy.">
+      <created>1670113256352</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670113256352</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Test OSS deploy.">
+      <created>1670113497807</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670113497807</updated>
+    </task>
+    <task id="LOCAL-00012" summary="A HelloHapi operation provider.">
+      <created>1670133416723</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670133416723</updated>
+    </task>
+    <task id="LOCAL-00013" summary="A HelloHapi operation provider.">
+      <created>1670133425161</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670133425161</updated>
+    </task>
+    <task id="LOCAL-00014" summary="A static web configuration for /static/**">
+      <created>1673302880506</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673302880506</updated>
+    </task>
+    <task id="LOCAL-00015" summary="A static web configuration for /static/**">
+      <created>1673303691757</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673303691757</updated>
+    </task>
+    <task id="LOCAL-00016" summary="A static web configuration for /static/**">
+      <created>1673304232622</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673304232622</updated>
+    </task>
+    <task id="LOCAL-00017" summary="TimsUI as /timsui/**">
+      <created>1673333281626</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673333281626</updated>
+    </task>
+    <task id="LOCAL-00018" summary="TimsUI as /timsui/**">
+      <created>1673334742520</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673334742520</updated>
+    </task>
+    <task id="LOCAL-00019" summary="TimsUI as /timsui/**">
+      <created>1673335594207</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673335594207</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactoring the repo layout.">
+      <created>1675472702113</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1675472702113</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactoring the repo layout.">
+      <created>1675473158826</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675473158826</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactoring the repo layout.">
+      <created>1675473376567</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675473376567</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="se-refactor" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Test OSS deploy." />
+    <MESSAGE value="A HelloHapi operation provider." />
+    <MESSAGE value="A static web configuration for /static/**" />
+    <MESSAGE value="TimsUI as /timsui/**" />
+    <MESSAGE value="Refactoring the repo layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring the repo layout." />
+  </component>
+</project>
