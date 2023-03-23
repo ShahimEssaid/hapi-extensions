@@ -1,0 +1,2 @@
+mvn   -Dartifact=com.essaid.fhir.hapi:hapi-fhir-jpaserver-starter-build:6.4.0-b1-SNAPSHOT:war:overlay -DoutputDirectory=1 dependency:unpack
+mvn   -Dartifact=ca.uhn.hapi.fhir:hapi-fhir-testpage-overlay:6.4.0:war -DoutputDirectory=2 dependency:unpack

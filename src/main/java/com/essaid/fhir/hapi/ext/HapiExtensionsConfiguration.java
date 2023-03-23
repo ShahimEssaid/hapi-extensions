@@ -1,5 +1,6 @@
 package com.essaid.fhir.hapi.ext;
 
+import ca.uhn.fhir.jpa.starter.Application;
 import com.essaid.fhir.hapi.ext.provider.HelloHapi;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,5 +14,8 @@ public class HapiExtensionsConfiguration {
     public HapiExtensionsConfiguration(){
         System.out.println("==============  HapiExtensionsConfiguration  ");
     }
+
+    Application application;
+
 
 }

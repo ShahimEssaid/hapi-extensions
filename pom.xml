@@ -4,15 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.essaid</groupId>
+    <artifactId>com.essaid.pom</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath></relativePath>
+  </parent>
 
-  <groupId>com.essaid.tmp</groupId>
-  <artifactId>com.essaid.tmp.452345345234</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <groupId>com.essaid.fhir.hapi</groupId>
+  <artifactId>hapi-extensions</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
 
-  <modules>
-    <module>extensions</module>
-    <module>jpastarter-extended</module>
-  </modules>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <hapi-fhir.version>6.2.2</hapi-fhir.version>
+    <spring-boot.version>2.7.4</spring-boot.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.essaid.fhir.hapi</groupId>
+      <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+      <version>6.4.0-b1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
 
 </project>
