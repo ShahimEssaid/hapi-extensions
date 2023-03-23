@@ -30,6 +30,10 @@
     </option>
   </component>
   <component name="ProjectId" id="2NQV9HmYkfbMkp8HDrMsn02hvNh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="1" id="Remove" />
+  </component>
   <component name="ProjectViewState">
     <option name="flattenModules" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,14 +45,26 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/essaids/_data/Dropbox/L/git/gh/se/hapi-extensions",
+    "last_opened_file_path": "/home/essaids/_data/Dropbox/L/git/gh/se/com.essaid.pom",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.Unnamed">
     <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hapi-extensions" />
@@ -71,11 +87,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679596140241</updated>
-      <workItem from="1679596141503" duration="379000" />
+      <workItem from="1679596141503" duration="2844000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactoring to use pre-built HAPI starter.">
+      <created>1679603039373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679603039373</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Trying new GHA build">
+      <created>1679603258602</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679603258602</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Trying new GHA build">
+      <created>1679603806847</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679603806847</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactoring to use pre-built HAPI starter." />
+    <MESSAGE value="Trying new GHA build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying new GHA build" />
   </component>
 </project>

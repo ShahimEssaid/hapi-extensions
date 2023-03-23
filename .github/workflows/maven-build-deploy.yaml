@@ -25,8 +25,7 @@ on:
   # If a pull request needs to be deployed, create a branch to track the PR's branch to trigger a deployment.
   push:         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore
     paths:      # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore
-      - '.github/workflows/maven-build-deploy.yaml'
-      - 'maven/java-jar/**'
+      - '**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -45,7 +44,7 @@ jobs:
       MVN_PROJECT_REL_PATH: ''
 
       # Bash regular expression to math against branch names to decide if the branch should be deployed or not.
-      DEPLOY_BRANCHES: '^main$|^master$'
+      DEPLOY_BRANCHES: '^main$|^master$|^dev$'
       NO_DEPLOY_BRANCHES: '^$'
       # The maven command line without the "mvn" part. If there is a ./mvnw it will be use. Otherwise, defaults to availabe
       # mvn command in the image.
@@ -70,7 +69,7 @@ jobs:
 
       # Which branches to qualify. A branch has to both match the QUALIFY_BRANCHES and NOT match the NO_QUALIFY_BRANCHES
       # in order for its version to be branch-qualified.
-      QUALIFY_BRANCHES: '^$'  # None by default
+      QUALIFY_BRANCHES: '^dev$'  # None by default
       NO_QUALIFY_BRANCHES: '^main$|^master$'
 
 
@@ -83,8 +82,8 @@ jobs:
       MVN_VERSION_SET_COMMAND: '--no-transfer-progress versions:set -DprocessAllModules'
 
       # The repository ids, from the POM, for distribution so that the settings.xml can be created correctly below.
-      DISTRIBUTION_RELEASE_REPO_ID: 'release-id'
-      DISTRIBUTION_SNAPSHOT_REPO_ID: 'snapshot-id'
+      DISTRIBUTION_RELEASE_REPO_ID: 'oss'
+      DISTRIBUTION_SNAPSHOT_REPO_ID: 'oss'
 
       # The default server id for the maven-gpg-plugin to work.
       # Don't change this unless you know what you are doing.
