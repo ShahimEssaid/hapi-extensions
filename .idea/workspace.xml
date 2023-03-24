@@ -43,13 +43,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/essaids/_data/Dropbox/L/git/gh/se/com.essaid.pom",
+    "last_opened_file_path": "/home/essaids/_data/Dropbox/L/git/gh/HOT-Ecosystem/tims-hapi-build",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -64,9 +69,15 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.github/workflows" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/spring" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.essaid.fhir.hapi.ext.processor" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Unnamed">
-    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hapi-extensions" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ca.uhn.fhir.jpa.starter.Application" />
       <method v="2">
@@ -75,7 +86,7 @@
     </configuration>
     <list>
       <item itemvalue="Remote JVM Debug.Remote local host 8999 debugger" />
-      <item itemvalue="Spring Boot.Unnamed" />
+      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.CLEAN jpa-starter_profiles_dev-ext" />
     </list>
   </component>
@@ -87,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679596140241</updated>
-      <workItem from="1679596141503" duration="2844000" />
+      <workItem from="1679596141503" duration="6727000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring to use pre-built HAPI starter.">
       <created>1679603039373</created>
@@ -110,7 +121,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679603806847</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Trying new GHA build">
+      <created>1679603943622</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679603943622</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Trying new GHA build">
+      <created>1679604156704</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679604156704</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring.">
+      <created>1679678135678</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679678135678</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +162,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring to use pre-built HAPI starter." />
     <MESSAGE value="Trying new GHA build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying new GHA build" />
+    <MESSAGE value="Refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring." />
   </component>
 </project>

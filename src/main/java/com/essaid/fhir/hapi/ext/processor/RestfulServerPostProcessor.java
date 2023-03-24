@@ -1,6 +1,7 @@
-package com.essaid.fhir.hapi.ext;
+package com.essaid.fhir.hapi.ext.processor;
 
 import ca.uhn.fhir.rest.server.RestfulServer;
+import com.essaid.fhir.hapi.ext.HapiExtensionsProperties;
 import com.essaid.fhir.hapi.ext.x.XPrintIndexMappingProvider;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.BeansException;
