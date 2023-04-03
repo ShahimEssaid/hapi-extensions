@@ -11,15 +11,16 @@ import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<ApplicationEvent> {
 
+  private final AtomicInteger hapiExitDelay = new AtomicInteger(0);
+  private final ApplicationContext context;
   private int finalExitCode = Integer.MIN_VALUE;
   private int hapiExitCode = Integer.MIN_VALUE;
-  private int hapiExitDelay = 0;
   private boolean contextClosed;
-  private final ApplicationContext context;
 
   public HapiExitManager(ApplicationContext context) {
     this.context = context;
@@ -34,11 +35,11 @@ public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<A
   }
 
   public int getHapiExitDelay() {
-    return hapiExitDelay;
+    return hapiExitDelay.get();
   }
 
   public void setHapiExitDelay(int hapiExitDelay) {
-    this.hapiExitDelay = hapiExitDelay;
+    this.hapiExitDelay.getAndUpdate(operand -> Math.max(operand, hapiExitDelay));
   }
 
   @Override
@@ -64,8 +65,11 @@ public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<A
       //System.out.println(this.toString());
       TimeUnit.SECONDS.sleep(checkIntervalSeconds);
       if (hapiExitCode != Integer.MIN_VALUE) {
-        TimeUnit.SECONDS.sleep(this.hapiExitDelay);
-        SpringApplication.exit(this.context);
+        if (this.hapiExitDelay.get() < 0) {
+          SpringApplication.exit(this.context);
+        } else {
+          this.hapiExitDelay.updateAndGet(operand -> operand - checkIntervalSeconds);
+        }
       }
       if (this.contextClosed) {
         return this.finalExitCode == Integer.MIN_VALUE ? 0 : this.finalExitCode;

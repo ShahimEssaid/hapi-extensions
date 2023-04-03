@@ -29,9 +29,7 @@ public class ShutdownOperation {
             parameters.addParameter().setName("Password").setValue(new StringType("Not set or not matching: " + (password != null ? password.getValue() : "Null")));
         } else {
             parameters.addParameter().setName("Shutting down").setValue(new StringType("True"));
-            if(exitDelay.getValue() > this.exitManager.getHapiExitDelay()){
-                this.exitManager.setHapiExitDelay(exitDelay.getValue());
-            }
+            this.exitManager.setHapiExitDelay(exitDelay.getValue());
             this.exitManager.setHapiExitCode(exitCode.getValue());
         }
         return parameters;
