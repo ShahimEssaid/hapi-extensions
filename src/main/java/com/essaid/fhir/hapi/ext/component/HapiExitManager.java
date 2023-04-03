@@ -17,6 +17,7 @@ public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<A
 
   private int finalExitCode = Integer.MIN_VALUE;
   private int hapiExitCode = Integer.MIN_VALUE;
+  private int hapiExitDelay = 0;
   private boolean contextClosed;
   private final ApplicationContext context;
 
@@ -30,6 +31,14 @@ public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<A
 
   public void setHapiExitCode(int hapiExitCode) {
     this.hapiExitCode = hapiExitCode;
+  }
+
+  public int getHapiExitDelay() {
+    return hapiExitDelay;
+  }
+
+  public void setHapiExitDelay(int hapiExitDelay) {
+    this.hapiExitDelay = hapiExitDelay;
   }
 
   @Override
@@ -55,6 +64,7 @@ public class HapiExitManager implements ExitCodeGenerator, ApplicationListener<A
       //System.out.println(this.toString());
       TimeUnit.SECONDS.sleep(checkIntervalSeconds);
       if (hapiExitCode != Integer.MIN_VALUE) {
+        TimeUnit.SECONDS.sleep(this.hapiExitDelay);
         SpringApplication.exit(this.context);
       }
       if (this.contextClosed) {

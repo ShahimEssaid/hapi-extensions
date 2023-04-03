@@ -22,12 +22,16 @@ public class ShutdownOperation {
 
     @Operation(name = "shutdown", idempotent = true)
     public Parameters shutdown(@OperationParam(name = "exit-code", typeName = "integer", min = 1, max = 1) IPrimitiveType<Integer> exitCode,
-                                    @OperationParam(name = "password", typeName = "string", min = 1, max = 1) IPrimitiveType<String> password) {
+                                    @OperationParam(name = "password", typeName = "string", min = 1, max = 1) IPrimitiveType<String> password,
+                               @OperationParam(name = "exit-delay", typeName = "integer", min = 1, max = 1) IPrimitiveType<Integer> exitDelay) {
         Parameters parameters = new Parameters();
         if (password == null || !password.getValue().equals(extensionsProperties.getShutdownPassword())) {
             parameters.addParameter().setName("Password").setValue(new StringType("Not set or not matching: " + (password != null ? password.getValue() : "Null")));
         } else {
             parameters.addParameter().setName("Shutting down").setValue(new StringType("True"));
+            if(exitDelay.getValue() > this.exitManager.getHapiExitDelay()){
+                this.exitManager.setHapiExitDelay(exitDelay.getValue());
+            }
             this.exitManager.setHapiExitCode(exitCode.getValue());
         }
         return parameters;
