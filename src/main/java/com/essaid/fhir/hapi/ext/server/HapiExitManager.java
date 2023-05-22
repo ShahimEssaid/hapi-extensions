@@ -1,4 +1,4 @@
-package com.essaid.fhir.hapi.ext.component;
+package com.essaid.fhir.hapi.ext.server;
 
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.ExitCodeEvent;
@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.stereotype.Component;
 

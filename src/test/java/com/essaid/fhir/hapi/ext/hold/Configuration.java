@@ -1,4 +1,4 @@
-package com.essaid.fhir.hapi.ext.configuration;
+package com.essaid.fhir.hapi.ext.hold;
 
 import org.springframework.context.annotation.Import;
 

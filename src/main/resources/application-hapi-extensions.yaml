@@ -1,0 +1,9 @@
+#This is just an example file. The following properties need to be specified in an actual Spring Boot configuration file.
+
+
+com:
+  essaid:
+    hapi-ext:
+      providersConfiguration:
+        '[com.essaid.fhir.hapi.ext.server.provider.ShutdownOperation]':
+          password: shutdown

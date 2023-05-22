@@ -1,0 +1,51 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+com:
+  essaid:
+    hapi-ext:
+      restful-server:
+        configurers:
+          enabled: true
+          type: map # map to use the mapping configuration, or 'context' (the default) to look up all implementations in the context
+          map:
+            restfulServerConfigurerExample: class:com.essaid.fhir.hapi.ext.test.example.RestfulServerConfigurerExample
+      entity-manager-factory:
+        process-properties: true
+        default-properties:
+          hapiex.prop.default.one: one
+          hapiex.prop.default.two: two
+          hapiex.prop.default.three: three
+
+        override-properties:
+          # todo: figure out how to cancel out a property
+          hapiex.prop.default.two: two
+          "hibernate.search.backend.analysis.configurer": class:com.essaid.fhir.hapi.ext.HapiExtensionConfiguration
+          "hibernate.search.mapping.configurer": class:com.essaid.fhir.hapi.ext.HapiExtensionConfiguration
+        delete-property:
+          hapiex.prop.default.three: three
+
+        configurers:
+          enabled: true
+          type: map # map to use the mapping configuration, or 'context' (the default) to look up all implementations in the context
+          map:
+            emfbExample: class:com.essaid.fhir.hapi.ext.test.example.EMFBConfigurerExample
+      index:
+        analysis:
+          apply-defaults: true
+          configurers:
+            enabled: true
+            type: map # map to use the mapping configuration, or 'context' (the default) to look up all implementations in the context
+            map:
+              analysisExample: class:com.essaid.fhir.hapi.ext.test.example.LuceneAnalysisConfigurerExample
+        mapping:
+          configurers:
+            enabled: true
+            type: map # map to use the mapping configuration, or 'context' (the default) to look up all implementations in the context
+            map: { }
+        providersConfiguration:
+
+
+
+
+

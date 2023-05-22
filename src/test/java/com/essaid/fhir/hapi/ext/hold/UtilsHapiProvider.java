@@ -1,4 +1,4 @@
-package com.essaid.fhir.hapi.ext.provider;
+package com.essaid.fhir.hapi.ext.hold;
 
 import ca.uhn.fhir.rest.annotation.Operation;
 import org.hibernate.search.engine.backend.index.IndexManager;

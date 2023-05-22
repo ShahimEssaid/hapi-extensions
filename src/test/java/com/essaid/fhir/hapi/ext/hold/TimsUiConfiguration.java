@@ -1,4 +1,4 @@
-package com.essaid.fhir.hapi.ext.configuration;
+package com.essaid.fhir.hapi.ext.hold;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -8,22 +8,21 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ConditionalOnProperty(prefix = "hapi.fhir", name = "staticLocation")
-public class StaticWebConfiguration implements WebMvcConfigurer {
+@ConditionalOnProperty(prefix = "tims", name = "uiLocation")
+public class TimsUiConfiguration implements WebMvcConfigurer {
 
-    @Value("${hapi.fhir.staticLocation}")
-    private String staticLocation;
+    @Value("${tims.uiLocation}")
+    private String timsUiLocation;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        System.out.println("================ STATIC LOCATION: " + staticLocation);
-        registry.addResourceHandler("/static/**").addResourceLocations(staticLocation);
+        System.out.println("================ TIMS UI LOCATION: " + timsUiLocation);
+        registry.addResourceHandler("/timsui/**").addResourceLocations(timsUiLocation);
     }
-
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addRedirectViewController("/static/", "/static/index.html");
-        registry.addRedirectViewController("/static", "/static/index.html");
+        registry.addRedirectViewController("/timsui/", "/timsui/index.html");
+        registry.addRedirectViewController("/timsui", "/timsui/index.html");
     }
 }

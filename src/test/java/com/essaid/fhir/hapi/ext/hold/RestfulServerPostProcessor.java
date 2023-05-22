@@ -1,8 +1,7 @@
-package com.essaid.fhir.hapi.ext.processor;
+package com.essaid.fhir.hapi.ext.hold;
 
 import ca.uhn.fhir.rest.server.RestfulServer;
-import com.essaid.fhir.hapi.ext.HapiExtensionsProperties;
-import com.essaid.fhir.hapi.ext.x.XPrintIndexMappingProvider;
+import com.essaid.fhir.hapi.ext.HapiExtensionProperties;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -15,10 +14,10 @@ import org.springframework.stereotype.Component;
 public class RestfulServerPostProcessor implements BeanPostProcessor, ApplicationContextAware {
 
   private final Environment environment;
-  HapiExtensionsProperties properties;
+  HapiExtensionProperties properties;
   private ApplicationContext context;
 
-  public RestfulServerPostProcessor(HapiExtensionsProperties properties, Environment environment) {
+  public RestfulServerPostProcessor(HapiExtensionProperties properties, Environment environment) {
     this.properties = properties;
     this.environment = environment;
   }
@@ -28,21 +27,21 @@ public class RestfulServerPostProcessor implements BeanPostProcessor, Applicatio
 
     if (beanName.equals("restfulServer")) {
       RestfulServer hapiServer = (RestfulServer) bean;
-      properties.getProviders().forEach((providerKey, providerConfig) -> {
-        try {
-          Object provider = this.context.getBean(RestfulServerPostProcessor.class.getClassLoader().loadClass(providerConfig.getClassName()));
-          if (provider != null) {
-            System.out.println("=============== Loading provider:: " + providerConfig);
-            hapiServer.registerProvider(provider);
-          } else {
-            System.out.println("=============== Provider not found: " + providerConfig);
-          }
-
-
-        } catch (ClassNotFoundException e) {
-          throw new RuntimeException(e);
-        }
-      });
+//      properties.getProviders().forEach((providerKey, providerConfig) -> {
+//        try {
+//          Object provider = this.context.getBean(RestfulServerPostProcessor.class.getClassLoader().loadClass(providerConfig.getClassName()));
+//          if (provider != null) {
+//            System.out.println("=============== Loading provider:: " + providerConfig);
+//            hapiServer.registerProvider(provider);
+//          } else {
+//            System.out.println("=============== Provider not found: " + providerConfig);
+//          }
+//
+//
+//        } catch (ClassNotFoundException e) {
+//          throw new RuntimeException(e);
+//        }
+//      });
 //            properties.getProviderClassNames().forEach(s -> {
 //                try {
 //                    hapiServer.registerProvider(this.context.getBean(RestfulServerPostProcessor.class.getClassLoader().loadClass(s)));
