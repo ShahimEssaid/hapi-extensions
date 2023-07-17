@@ -5,7 +5,7 @@ import ca.uhn.fhir.batch2.jobs.reindex.ReindexProvider;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.interceptor.api.IInterceptorBroadcaster;
-import ca.uhn.fhir.jpa.api.config.DaoConfig;
+import ca.uhn.fhir.jpa.api.config.JpaStorageSettings;
 import ca.uhn.fhir.jpa.api.dao.DaoRegistry;
 import ca.uhn.fhir.jpa.api.dao.IFhirSystemDao;
 import ca.uhn.fhir.jpa.binary.interceptor.BinaryStorageInterceptor;
@@ -75,10 +75,13 @@ public class HapiExtensionConfiguration implements HibernateOrmSearchMappingConf
     @Bean
     public RestfulServer restfulServer(
             IFhirSystemDao<?, ?> fhirSystemDao,
-            AppProperties appProperties, DaoRegistry daoRegistry,
+            AppProperties appProperties,
+            DaoRegistry daoRegistry,
             Optional<MdmProviderLoader> mdmProviderProvider,
             IJpaSystemProvider jpaSystemProvider,
-            ResourceProviderFactory resourceProviderFactory, DaoConfig daoConfig,
+            ResourceProviderFactory resourceProviderFactory,
+            JpaStorageSettings jpaStorageSettings,
+
             ISearchParamRegistry searchParamRegistry,
             IValidationSupport theValidationSupport,
             DatabaseBackedPagingProvider databaseBackedPagingProvider,
@@ -89,7 +92,8 @@ public class HapiExtensionConfiguration implements HibernateOrmSearchMappingConf
             IInterceptorBroadcaster interceptorBroadcaster,
             Optional<BinaryAccessProvider> binaryAccessProvider,
             BinaryStorageInterceptor binaryStorageInterceptor,
-            IValidatorModule validatorModule, Optional<GraphQLProvider> graphQLProvider,
+            IValidatorModule validatorModule,
+            Optional<GraphQLProvider> graphQLProvider,
             BulkDataExportProvider bulkDataExportProvider,
             BulkDataImportProvider bulkDataImportProvider,
             ValueSetOperationProvider theValueSetOperationProvider,
@@ -102,7 +106,7 @@ public class HapiExtensionConfiguration implements HibernateOrmSearchMappingConf
             Optional<IpsOperationProvider> theIpsOperationProvider) {
 
         RestfulServer restfulServer = starterJpaConfig.restfulServer(fhirSystemDao, appProperties, daoRegistry,
-                mdmProviderProvider, jpaSystemProvider, resourceProviderFactory, daoConfig, searchParamRegistry,
+                mdmProviderProvider, jpaSystemProvider, resourceProviderFactory, jpaStorageSettings, searchParamRegistry,
                 theValidationSupport, databaseBackedPagingProvider, loggingInterceptor, terminologyUploaderProvider,
                 subscriptionTriggeringProvider, corsInterceptor, interceptorBroadcaster, binaryAccessProvider,
                 binaryStorageInterceptor, validatorModule, graphQLProvider, bulkDataExportProvider,

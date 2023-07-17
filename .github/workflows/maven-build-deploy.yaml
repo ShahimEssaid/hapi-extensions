@@ -44,7 +44,7 @@ jobs:
       MVN_PROJECT_REL_PATH: ''
 
       # Bash regular expression to math against branch names to decide if the branch should be deployed or not.
-      DEPLOY_BRANCHES: '^main$|^master$|^dev$'
+      DEPLOY_BRANCHES: '^main$|^master$|^dev.*$'
       NO_DEPLOY_BRANCHES: '^$'
       # The maven command line without the "mvn" part. If there is a ./mvnw it will be use. Otherwise, defaults to availabe
       # mvn command in the image.
@@ -69,7 +69,7 @@ jobs:
 
       # Which branches to qualify. A branch has to both match the QUALIFY_BRANCHES and NOT match the NO_QUALIFY_BRANCHES
       # in order for its version to be branch-qualified.
-      QUALIFY_BRANCHES: '^dev$'  # None by default
+      QUALIFY_BRANCHES: '^dev.*$'  # None by default
       NO_QUALIFY_BRANCHES: '^main$|^master$'
 
 
