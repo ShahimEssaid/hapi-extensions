@@ -7,6 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hapi-extensions" />
+        <module name="com.essaid.fhir.hapi.hapi-extensions" />
+        <module name="v6.8.0-b1-example" />
+        <module name="v6.8.0-b1" />
       </profile>
     </annotationProcessing>
   </component>

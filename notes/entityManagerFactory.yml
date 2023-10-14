@@ -1,0 +1,148 @@
+# The following is the default and/or hardcoded configuration that affects the JPA layer.
+# See an example property map from a default run at the end.
+
+spring:
+  jpa:
+    properties:
+      # The following properties are defaulted in HapiFhirLocalContainerEntityManagerFactoryBean
+      # or ca.uhn.fhir.jpa.starter.util.EnvironmentHelper.getHibernateProperties
+      hibernate:
+        criteria:
+          # See: https://vladmihalcea.com/how-does-hibernate-handle-jpa-criteria-api-literals/
+          literal_handling_mode: bind
+        connection:
+          handling_mode: DELAYED_ACQUISITION_AND_HOLD
+        jdbc:
+          batch_size: 30  # The value from HapiFhirLocalContainerEntityManagerFactoryBean
+          batch_versioned_data:      true
+        order_inserts: true
+        order_updates: true
+        resource:
+          beans:
+            container: org.springframework.orm.hibernate5.SpringBeanContainer
+        archive:
+          scanner: org.hibernate.boot.archive.scan.internal.DisabledScanner
+        implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        format_sql: false
+        show_sql: false
+        hbm2ddl:
+          auto: update
+        cache:
+          use_query_cache: false
+          use_second_level_cache: false
+          use_structured_entries: false
+          use_minimal_puts: false
+
+
+        search:
+          enabled: false
+---
+# If hibernate search is enabled with ES
+# ca.uhn.fhir.jpa.search.elastic.ElasticsearchHibernatePropertiesBuilder is used to set, not default, the properties
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        search:
+          enabled: true  # if this is set.
+          backend:
+            type: elasticsearch
+            analysis:
+              # This is hard coded in ca.uhn.fhir.jpa.search.elastic.ElasticsearchHibernatePropertiesBuilder.apply
+              configurer: ca.uhn.fhir.jpa.search.HapiHSearchAnalysisConfigurers.HapiElasticsearchAnalysisConfigurer
+            hosts: ""  # A copy of elasticsearch.rest_url if it is set
+            protocol: http # A copy of elasticsearch.*
+            username: ""  # A copy of elasticsearch.*
+            password: ""  # A copy of elasticsearch.*
+            # This is hard coded in ...
+            dynamic_mapping: true
+            schema_management:
+              strategy:  create  # A copy of elasticsearch.*   // todo: case insensitive here, or in elasticsearch.*?
+              # This is hard coded in ...
+              minimal_required_status_wait_timeout: 10000
+              minimal_required_status: yellow
+              # This is hard coded in ...
+              settings_file: ca/uhn/fhir/jpa/elastic/index-settings.json
+            log:
+              json_pretty_printing:  # based on elasticsearch.debug.pretty_print_json_log
+            # This is hard coded in ...
+            scroll_timeout: 60
+            layout:
+              # This is hard coded in ...
+              strategy: ca.uhn.fhir.jpa.search.elastic.IndexNamePrefixLayoutStrategy
+            # Other AWS settings skipped for now. See: ca.uhn.fhir.jpa.search.elastic.ElasticsearchHibernatePropertiesBuilder.apply
+        automatic_indexing:
+          synchronization:
+            strategy:  # read-sync or async based on elasticsearch.debug.refresh_after_write
+
+
+# This is checked to decide if ES is enabled or if it's Lucene
+elasticsearch:
+  enabled: true
+  required_index_status: YELLOW
+  # this isn't actually a URL, it's the hosts setting here: spring.jpa.properties.hibernate.search.backend.hosts
+  rest_url: ""
+  username: ""
+  password: ""
+  protocol: http
+  schema_management_strategy: CREATE
+  debug:
+    # This determines the debug index sync strategy
+    # true sets it to read-sync, false or missing sets it to async
+    refresh_after_write: false
+    pretty_print_json_log: false
+
+---
+# If hibernate search is enabled with Lucene
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        search:
+          enabled: true  # if this is set.
+          backend:
+            type: lucene
+            directory:
+              type: local-filesystem
+              root: target/lucenefiles
+            analysis:
+              configurer: ca.uhn.fhir.jpa.search.HapiHSearchAnalysisConfigurers.HapiLuceneAnalysisConfigurer
+            lucene_version: LATEST
+
+
+
+# This is checked to decide if ES is enabled or if it's Lucene
+elasticsearch:
+  enabled: false # or missing
+
+
+#  "hibernate.format_sql" -> "false"
+#  "hibernate.hbm2ddl.auto" -> "update"
+#  "hibernate.connection.handling_mode" -> {PhysicalConnectionHandlingMode@10454} "DELAYED_ACQUISITION_AND_HOLD"
+#  "hibernate.resource.beans.container" -> {SpringBeanContainer@10456}
+#  "hibernate.dialect" -> "ca.uhn.fhir.jpa.model.dialect.HapiFhirH2Dialect"
+#  "hibernate.implicit_naming_strategy" -> "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+#  "hibernate.cache.use_structured_entries" -> {Boolean@10462} false
+#  "hibernate.search.backend.directory.type" -> "local-filesystem"
+#  "hibernate.cache.use_query_cache" -> {Boolean@10462} false
+#  "hibernate.search.backend.type" -> "lucene"
+#  "hibernate.order_inserts" -> "true"
+#  "hibernate.criteria.literal_handling_mode" -> {LiteralHandlingMode@10471} "BIND"
+#  "hibernate.search.backend.directory.root" -> "target/lucenefiles"
+#  "hibernate.cache.use_minimal_puts" -> {Boolean@10462} false
+#  "hibernate.show_sql" -> "false"
+#  "hibernate.jdbc.batch_versioned_data" -> "true"
+#  "hibernate.order_updates" -> "true"
+#  "hibernate.jdbc.batch_size" -> "30"
+#  "hibernate.search.backend.analysis.configurer" -> "ca.uhn.fhir.jpa.search.HapiHSearchAnalysisConfigurers$HapiLuceneAnalysisConfigurer"
+#  "hibernate.physical_naming_strategy" -> "org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy"
+#  "hibernate.search.mapping.configurer" -> "bean:mappingConfigurer"
+#  "hibernate.search.enabled" -> "true"
+#  "hibernate.cache.use_second_level_cache" -> {Boolean@10462} false
+#  "hibernate.search.backend.lucene_version" -> {Version@10489} "8.11.1"
+#  "hibernate.archive.scanner" -> "org.hibernate.boot.archive.scan.internal.DisabledScanner"
+
+

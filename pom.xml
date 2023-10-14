@@ -5,60 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.essaid</groupId>
-        <artifactId>com.essaid.pom</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
-        <relativePath></relativePath>
+        <groupId>com.essaid.poms</groupId>
+        <artifactId>com.essaid.poms.top</artifactId>
+        <version>0.1.2</version>
     </parent>
 
     <groupId>com.essaid.fhir.hapi</groupId>
-    <artifactId>hapi-extensions</artifactId>
-    <version>0.3.0-6.6.0-SNAPSHOT</version>
-
-    <repositories>
-        <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+    <artifactId>com.essaid.fhir.hapi.hapi-extensions</artifactId>
+    <version>0.4.0-6.8.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <hapi-fhir.version>6.2.2</hapi-fhir.version>-->
-<!--        <spring-boot.version>2.7.4</spring-boot.version>-->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.essaid.fhir.hapi</groupId>
-            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
-            <version>6.6.0-b1-SNAPSHOT</version>
+            <artifactId>com.essaid.fhir.hapi.hapi-fhir-jpaserver-starter-build</artifactId>
+            <version>6.8.0-b1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

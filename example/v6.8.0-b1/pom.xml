@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>v6.8.0-b1-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hapi-fhir-jpaserver-starter-build.version>6.8.0-b1-SNAPSHOT</hapi-fhir-jpaserver-starter-build.version>
+    </properties>
+
+<!--    <repositories>-->
+<!--        &lt;!&ndash; SE: This is needed to pick up the -SNAPSHOT dependency for now.&ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>oss</id>-->
+<!--            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+
+    <dependencies>
+        <dependency>
+            <groupId>com.essaid.fhir.hapi</groupId>
+            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+            <version>${hapi-fhir-jpaserver-starter-build.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.essaid.fhir.hapi</groupId>
+            <artifactId>com.essaid.fhir.hapi.hapi-extensions</artifactId>
+            <version>0.4.0-6.8.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>hapi-fhir-testpage-overlay</artifactId>
+            <version>6.8.0</version>
+            <type>war</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.essaid.fhir.hapi</groupId>
+            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+            <classifier>starter-overlay</classifier>
+            <version>${hapi-fhir-jpaserver-starter-build.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.essaid.fhir.hapi</groupId>
+            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+            <classifier>build-overlay</classifier>
+            <version>${hapi-fhir-jpaserver-starter-build.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <overlays>
+                        <overlay>
+                            <groupId>com.essaid.fhir.hapi</groupId>
+                            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+                            <classifier>build-overlay</classifier>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.essaid.fhir.hapi</groupId>
+                            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
+                            <classifier>starter-overlay</classifier>
+                        </overlay>
+                        <overlay>
+                            <groupId>ca.uhn.hapi.fhir</groupId>
+                            <artifactId>hapi-fhir-testpage-overlay</artifactId>
+                        </overlay>
+                    </overlays>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.1.2</version>
+                <goals>
+                    <goal>repackage</goal>
+                </goals>
+                <executions>
+                    <execution>
+                        <id>repackage-war</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.example.HapiServer</mainClass>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>
